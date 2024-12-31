@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJP1H6KXP3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZJP1H6KXP3');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mood Music Recommender",
+      "alternateName": ["Ai Music Recommender", "Ai Song Recommender", "Song Recommender", "Music Recommender", "Mood Based Music Recommender", "Ai Music", "Ai Song"],
+      "url": "https://recomood.vercel.app/"
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This site helps you find music that matches your current mood. Whether you're feeling happy, sad, or anything in between, simply describe your mood, select a language, and discover a playlist that resonates with you." />
+    <title>Moodپێشنیاری مۆسیقا لەسەر بنەمای</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="intro">
+            <form id="moodForm">
+                <h1>دۆزینەوەی قورانی پیرۆز و مۆسیقا و گۆرانی </h1>
+                <div class="input-container">
+                    <input id="mood" type="text">
+                    <select name="language" id="language">
+                        <option value="Any language">زمان</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Chinese (Simplified)">Chinese</option>
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="kurdish">kurdish</option>
+
+                    </select>
+                </div>
+                <div>
+                    <button type="button" id="music">دۆزینەوە</button>
+                    <button type="button" id="playlist">پلەی لیست بەدەست بهێنە</button>
+                </div>
+                <div id="embed-iframe"></div>
+            </form>
+            
+        </section>
+    
+        <section id="second">
+            <footer>
+                <p>ئەم ماڵپەڕە یارمەتیت دەدات بۆ دۆزینەوەی مۆسیقایەک کە لەگەڵ باری دەروونی ئێستاتدا بگونجێت. جا هەست بە خۆشی، دڵتەنگی، یان هەر شتێک لە نێوانیاندا بکەیت، تەنها باسی باری دەروونی خۆت بکە، زمانێک هەڵبژێرە و پلەی لیستێک بدۆزەرەوە کە دەنگت بداتەوە.</p>
+                <p style="font-size: 25px;">نمونەی ئامۆژگارییەکانی بنەمای هەست</p>
+                <div class="container">
+                    <p class="text">لە ئێستادا هەست بە ناخۆشی دەکەم</p>
+                    <p class="text">زۆر هەوڵمدا خۆشم بوێت</p>
+                    <p class="text">پێم وایە عاشق بووم</p>
+                    <p class="text">هەست بە وزەیەکی زۆر دەکەم</p>
+                    <p class="text">هەست دەکەم ئەمڕۆ هیچ ناکەم</p>
+                    <p class="text">پێویستە سەما بکەم</p>
+                    <p class="text">هەست بە وزەیەکی زۆر دەکەم</p>
+                    <p class="text">هەست ناکەم بچمە قوتابخانە </p>
+                    <p class="text">من بێدەنگ و خەمۆکم</p>
+                    <p class="text">من شێرپەنجەم بردەوە</p>
+                    <p class="text">ئەمڕۆ زۆر دڵخۆشم</p>
+                    <p class="text">هەست دەکەم بێ هۆکار بگریم</p>
+                    <p class="text">زۆر پەشیمانم.</p>
+                    <p class="text">منیش دەمەوێت خۆشەویست بم</p>
+                    </div>
+                    </footer>
+        </section>
+        <section id="warning">
+            <footer>
+                <div class="container">
+                    <p style="font-size: 25px; color: wheat;">ئاگادارکردنەوەکان</p>
+                    <p>→ پێویستە بچیتە ژوورەوە بۆ spotify بۆ گوێگرتن لە گۆرانییە تەواوەکان</p>
+                    <p>→ ئامێرە مۆبایلەکان هەمیشە دەبێت پێشبینی</p> ببینن
+                    <p>→ Get Playlist لەوانەیە هەمیشە بە دروستی کار نەکات</p>
+                    <p>→ تۆ مۆسیقا بەدەست ناهێنیت دژی پرۆمتی بێ ئەخلاقی</p>
+                    <p class="text"> دروستکراوەZanaCyberلەلایەن</p>
+                </div>
+                <p class="text"></p> ZanaCyber</p>
+                <p class="text"></p> Zana B.Ahmad</p>
+            </footer>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textElement = document.querySelectorAll('.text')
+            const sections = document.querySelectorAll('section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        textElement.forEach(element => {
+                            element.classList.remove('animate-text');
+                            element.style.borderRight = '1px solid';
+                            // Trigger reflow (repaint) to reset the animation
+                            void element.offsetWidth;
+                            // Start animation
+                            element.classList.add('animate-text');
+                        });
+                        
+                    }
+                });
+            }, {
+                threshold: 0.5 // Adjust this value as needed
+            });
+
+            sections.forEach(section => observer.observe(section));
+            textElement.forEach(element => {
+                element.addEventListener('animationend', () => {
+                    element.style.borderRight = '0px';
+                });
+            });
+            
+        });
+    </script>
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+    <script src="frontEnd.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
